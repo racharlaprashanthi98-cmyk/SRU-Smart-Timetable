@@ -1,0 +1,178 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SRU Smart Timetable</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f0f4f8;
+            color: #17365d;
+        }
+
+        header {
+            background: #173f73;
+            color: white;
+            text-align: center;
+            padding: 35px 15px;
+        }
+
+        header h1 {
+            margin: 0 0 15px;
+            font-size: 38px;
+        }
+
+        header p {
+            margin: 0;
+            font-size: 20px;
+        }
+
+        .container {
+            max-width: 950px;
+            margin: 45px auto;
+            padding: 30px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 5px 20px #00000010;
+        }
+
+        h2 {
+            margin-top: 15px;
+            font-size: 29px;
+        }
+
+        label {
+            display: block;
+            margin-top: 22px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        select {
+            width: 100%;
+            padding: 15px;
+            border: 1px solid #cbd5e1;
+            border-radius: 9px;
+            background: white;
+            font-size: 17px;
+        }
+
+        button {
+            width: 100%;
+            margin-top: 28px;
+            padding: 16px;
+            border: none;
+            border-radius: 9px;
+            background: #173f73;
+            color: white;
+            font-size: 18px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #245994;
+        }
+
+        #result {
+            margin-top: 25px;
+            padding: 20px;
+            background: #eef5ff;
+            border-radius: 10px;
+            line-height: 1.7;
+            overflow-wrap: anywhere;
+        }
+
+        .class-item {
+            background: white;
+            margin: 12px 0;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid #173f73;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #52657b;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                margin: 20px 12px;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 29px;
+            }
+
+            header p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>SRU Smart Timetable</h1>
+        <p>CSE - Artificial Intelligence and Machine Learning</p>
+    </header>
+
+    <main class="container">
+        <h2>Find Your Timetable</h2>
+
+        <label for="year">Select Year:</label>
+        <select id="year">
+            <option value="1">1st Year</option>
+            <option value="2">2nd Year</option>
+            <option value="3">3rd Year</option>
+            <option value="4">4th Year</option>
+        </select>
+
+        <label for="section">Select Section:</label>
+        <select id="section">
+            <option value="A">Section A</option>
+            <option value="B">Section B</option>
+            <option value="C">Section C</option>
+        </select>
+
+        <label for="day">Select Day:</label>
+        <select id="day">
+            <option value="Monday">Monday</option>
+            <option value="Tuesday">Tuesday</option>
+            <option value="Wednesday">Wednesday</option>
+            <option value="Thursday">Thursday</option>
+            <option value="Friday">Friday</option>
+            <option value="Saturday">Saturday</option>
+        </select>
+
+        <button type="button" id="searchBtn">
+            Show Timetable
+        </button>
+
+        <div id="result" aria-live="polite">
+            Select your year, section and day to view the timetable.
+        </div>
+    </main>
+
+    <footer>
+        <p>SRU Smart Timetable Management System | SESD Project</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
