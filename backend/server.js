@@ -10,6 +10,8 @@ const PORT = process.env.PORT || 5000;
 // Middleware
 app.use(cors());
 app.use(express.json());
+// Serve frontend files
+app.use(express.static(path.join(__dirname, "../frontend")));
 
 // Create/open database file inside backend folder
 const db = new Database(path.join(__dirname, "timetable.db"));
