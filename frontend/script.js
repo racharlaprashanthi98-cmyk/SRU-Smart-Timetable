@@ -11,7 +11,7 @@ searchBtn.addEventListener("click", async () => {
 
     try {
         const url =
-            `http://localhost:5000/api/timetable?year=${encodeURIComponent(year)}&section=${encodeURIComponent(section)}&day=${encodeURIComponent(day)}`;
+            `https://sru-smart-timetable.onrender.com/api/timetable?year=${encodeURIComponent(year)}&section=${encodeURIComponent(section)}&day=${encodeURIComponent(day)}`
 
         const response = await fetch(url);
 
